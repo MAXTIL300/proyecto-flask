@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Informacion
+
+{% endblock %}
+
+{% block content %}
+
+<!-- <h1>Informacion </h1> -->
+<!-- <p>Esta es la pagina de Login </p> -->
+<h3>{{texto}}</h3>
+
+<body>
+    <div class="login">
+        <h1>Login</h1>
+        <div class="links">
+            <a href="{{ url_for('logined') }}" class="active">Login</a>
+            <a href="{{ url_for('register') }}">Register</a>
+        </div>
+        <form action="{{ url_for('logined') }}" method="post">
+            <label for="username">
+                <i class="fas fa-user"></i>
+            </label>
+            <input type="text" name="username" placeholder="Username" id="username" required>
+            <label for="password">
+                <i class="fas fa-lock"></i>
+            </label>
+            <input type="password" name="password" placeholder="Password" id="password" required>
+            <div class="msg">{{ msg }}</div>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
+
+</body>
+
+{% endblock %}

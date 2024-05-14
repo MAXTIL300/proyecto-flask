@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<title>{% block title %}| Documento flask{% endblock %} </title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Workbench&display=swap"
+    rel="stylesheet">
+<!-- bootstrap -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+
+<body>
+
+    <!-- <div class="loggedin">
+        <nav class="navtop">
+            <div>
+                <h1>Website </h1>
+                <a href="{{ url_for('home') }}"><i class="fas fa-home"></i>Home</a>
+                <a href="{{ url_for('profile') }}"><i class="fas fa-user-circle"></i>Profile</a>
+                <a href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i>Logout</a>
+            </div>
+        </nav> -->
+
+    </div>
+
+
+    <header>
+        <div id="logotipo">
+            <!-- logotipo django -->
+            <img src="{{url_for('static', filename='css/img/mono.png')}}" />
+            <h1> <small></small> CAMISHOP</h1>
+
+        </div>
+    </header>
+
+    <nav>
+
+        <ul>
+            <li>
+                <a href="/">Inicio</a>
+            </li>
+
+            {% if 'loggedin' in session %}
+            <li>
+                <a href="{{ url_for('crear_coche') }}">Crear camiseta</a>
+            </li>
+            {% endif %}
+
+            <li>
+                <a href="
+                {{url_for('Tienda')}}">Tienda</a>
+            </li>
+            <li>
+                <a href="
+                {{url_for('informacion')}}">Informacion</a>
+            </li>
+            <li>
+                <a href="{{url_for('contacto')}}">Contacto</a>
+            </li>
+
+            <li>
+                <a href="{{url_for('logined')}}">Login</a>
+            </li>
+        </ul>
+        {% if 'loggedin' in session %}
+        <nav class="navtop">
+            <div>
+                <!-- <h1>Website </h1> -->
+                <a href="{{ url_for('home') }}"><i class="fas fa-home"></i>Home</a>
+                <a href="{{ url_for('profile') }}"><i class="fas fa-user-circle"></i>Perfil</a>
+                <a href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i>Logout</a>
+            </div>
+        </nav>
+
+        {% endif %}
+
+    </nav>
+
+
+    <div class="barra">
+        <span class="esquina-izquierda"></span>
+        <span class="relleno-barra"></span>
+        <span class="esquina-derecha"></span>
+    </div>
+
+
+    <div id="content">
+        <div class="box">
+
+            {% block content %}
+            <!-- Codigo que viene del template -->
+            <strong>Contenido bloque original </strong>
+
+            {% endblock %}
+
+        </div>
+
+    </div>
+
+
+
+
+    <footer>
+        &copy;Edward Maz
+        <br>
+
+        {{now.day}}-{{now.month}}-{{now.year}}
+    </footer>
+
+
+</body>
+
+</html>

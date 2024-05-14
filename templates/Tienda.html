@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Tienda
+
+{% endblock %}
+{% block content %}
+
+<h1>listado de Camisetas </h1>
+
+<!-- mensajes alerta -->
+
+{% set messages = get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+<div class="message alert-success">
+    <h3>{{ message }}</h3>
+</div>
+{% endfor %}
+{% endif %}
+<!-- ///////////////////////////////////// -->
+
+{% for coche in coches %}
+<article class="article-item">
+
+    <div class="image">
+
+
+
+        <img src="{{ url_for('static', filename='uploads/' + coche[5]) }}" alt="Imagen camiseta">
+
+
+
+    </div>
+
+
+    <div class="data">
+        <h2>
+            <a href="{{url_for('coche', coche_id=coche.0)}}">
+                {{coche.1}}
+            </a>
+            <span class="date">
+                Talla: {{ coche[4] }}
+            </span>
+
+        </h2>
+
+        <p>
+
+            Precio: {{ coche[3] }}
+
+        </p>
+        {% if 'loggedin' in session %}
+        <p>
+            <a href="{{url_for('editar_coche', coche_id=coche.0)}}" class="btn btn-warning">editar</a>
+            <a href="{{url_for('borrar_coche', coche_id=coche.0)}}" class="btn ">eliminar</a>
+        </p>
+        {% endif %}
+
+
+
+    </div>
+
+    <div class="clearfix"></div>
+</article>
+
+
+
+{% endfor %}
+
+
+{% endblock %}

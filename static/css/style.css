@@ -1,0 +1,577 @@
+:root {
+    --color1: #4de8ec;
+}
+
+/* estilos generales */
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif, Arial, Helvetica;
+    text-decoration: none;
+}
+
+.box p,
+.box h2,
+.box h3,
+.box ul {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.box ul,
+.box ol {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+body {
+    background: #f2f2f2
+}
+/* fuentes */
+@font-face {
+    font-family: "Jost";
+    src: url('/static/fonts/Jost/Jost-BlackItalic.ttf') format('truetype');
+    font-weight: 800; /* Extra negrita */
+    font-style: normal;
+}
+/* ESTILOS CABECERA */
+
+header {
+    width: 1212px;
+    height: 140px;
+    background-color: #23282B;
+    margin: 0 auto;
+}
+
+#logotipo {
+    width: 60%;
+    height: 130px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+#logotipo img {
+    display: block;
+    width: 100px;
+    float: left;
+    margin-top: 5px;
+}
+
+#logotipo h1 {
+    display: block;
+    float: left;
+    margin-top: 35px;
+    margin-left: 20px;
+    letter-spacing: 2px;
+    /* font-weight: lighter; */
+    color:var(--color1);
+    font-family: "Jost";
+    font-style: italic;
+    background-image: linear-gradient(to right, #19a9e8 30%, #9d20d5 47%);
+      
+        -webkit-background-clip: text;
+      
+        -webkit-text-fill-color: transparent;
+      
+}
+
+/* barra navegacionm  */
+
+nav {
+    width: 1250px;
+    height: 40px;
+    margin: 0 auto;
+    background-color: #1B1E1F;
+    border: 1px solid#333333;
+    box-shadow: 0px 22px 22px gray;
+    font-size: 15px;
+}
+
+nav > ul {
+    list-style: none;
+    text-decoration: none;
+}
+
+nav > ul > li {
+    line-height: 40px;
+    float: left;
+}
+
+nav > ul > li > a {
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #ffffff;
+}
+
+nav > ul > li > a:hover {
+    background-color: var(--color1);
+    box-shadow: 0px 0px 5px black;
+    color: white;
+    transition: all 300ms;
+}
+
+nav > ul > li > ul{
+    display: none;
+    position: absolute;
+    color: white;
+    text-align: left;
+    width: 160px;
+    box-shadow: 0px 2px 2px gray;
+}
+nav > ul > li:hover > ul{
+    display: block;
+    color:white;
+    margin: 0px;
+    list-style: none;
+}
+
+nav > ul > li:hover > ul > li{
+    background: #F2F1F0;
+    border-bottom: 1px solid #d6d6d6;
+    padding: 8px;
+    line-height: 25px;
+    font-size: 13px;
+    transition: all 300ms;
+}
+nav > ul > li:hover > ul > li a{
+    color: #666;
+    transition: all 300ms;
+}
+nav > ul > li:hover > ul > li:hover{
+    background-color:var(--color1)
+}
+
+nav > ul > li:hover > ul > li:hover a{
+    display:block;
+    color:white;
+}
+
+
+.barra {
+    width: 1250px;
+    margin: 0 auto;
+}
+
+.esquina-izquierda {
+    display: block;
+    border-left: 20px solid transparent;
+    border-top: 10px solid #2B2F30;
+    float: left;
+}
+
+.esquina-derecha {
+    display: block;
+    border-right: 20px solid transparent;
+    border-top: 10px solid #2B2F30;
+    float: right;
+}
+
+.relleno-barra {
+    display: block;
+    width: 1210px;
+    height: 10px;
+    background: #2B2F30;
+    float: left;
+}
+/* imagenes login y registro */
+#gh {
+    display: block;
+    margin-left:42%;
+    max-width: 200px; /* ajusta el ancho según sea necesario */
+    height: auto; /* permite que la altura se ajuste automáticamente para mantener la proporción original */
+    
+  
+}
+
+/* ESTILO CONTENIDO CENTRAL  */
+
+#content {
+    width: 1212px;
+    min-height: 930px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+
+.box {
+
+    background: white;
+    width: 95%;
+    min-height: 930px;
+    padding: 20px;
+    border: 1px solid#ddd;
+    margin: 0 auto;
+    border radius: 2px;
+    
+}
+
+.box h1 {
+    text-align: center;
+}
+
+.box.image{
+
+    width: 45%;
+    float: left;
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
+.box.image img{
+    width: 100%;
+}
+.box a {
+    color: #444;
+    text-decoration: none;
+}
+.box a:hover{
+    transition: all 300ms;
+    color: var(--color1);
+}
+
+.box form {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.box form input,
+.box form label {
+    display:block;
+    padding: 5px;
+    padding-left: 0px;
+
+}
+
+.box form input,
+[type="text"],
+.box form input,
+[type="email"],
+.box form input,
+[type="password"],
+.box form textarea,
+.boxform select {
+
+    width: 100%;
+    margin-bottom: 10px;
+
+}
+
+.box form select {
+    width: 100px;
+    padding: 5px;
+}
+
+.box form input[type="submit"],
+.box form input[type="button"],
+.box form button {
+    padding: 15px;
+    width: 583px;
+    left: auto;
+    background-color:var(--color1);
+    border: 1px solid #444;
+    color: white;
+    cursor: pointer;
+    color: #f2f2f2;
+
+}
+
+.rojo {
+    color: red;
+    /* text-shadow: 0px 0px 1px rgb(8, 8, 8); */
+}
+
+.message,
+.alert-success,
+.alert{
+    padding: 10px;
+    background-color: #2ba977;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.alert-warning{
+    background-color: #a92b2b;
+}
+
+
+.mensaje {
+    color: #333;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 20px;
+    padding: 10px;
+    /* border: 2px var(--color1); */
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: center;
+  }
+
+.box form input[type="submit"]:hover,
+.box form input[type="button"]:hover,
+.box form button {
+    cursor: pointer;
+    background-color: #02160e;
+    transition: 300ms all;
+
+}
+
+
+
+
+.title {
+    color: #444;
+    letter-spacing: 1px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+
+
+}
+
+.date{
+    display: block;
+    font-size: 15px;
+    color:gray;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.content{
+    line-height: 25px;
+    font-size: 15px;
+}
+.article-item{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding:15px;
+    border-bottom: 1px solid #eee;
+    clear: both;
+    
+}
+
+.article-item .image{
+    width: 200px;
+    height: 200px;
+    float: left;
+    overflow: hidden;
+    
+    
+}
+.article-item .image img{
+    height: 100px;
+    width: auto;
+    
+}
+.article-item .data{
+    float: left;
+    padding: 15px;
+    padding-top: 0%;
+    }
+
+.article-item .data h2{
+    display: block;
+    font-size: 25px;
+    color: #444;
+    margin-bottom: 10px;
+    
+}
+
+.article-item span.date {
+    display: block;
+    font-size: 15px;
+    color:gray;
+    margin-bottom: 10px;
+  
+    
+}
+.btn{
+   padding: 10px;
+   background-color: #eb300f;
+   border-radius: 5px;
+   color: white !important;
+   border: 1px solid #0f0f0f;
+   cursor: pointer; 
+   display: block;
+   margin-top: 20px;
+   width: 120px;
+   text-align: center;
+}
+.btn-warning{
+    background:orange ;
+}
+.clearfix{
+    clear: both;
+    float: none;
+}
+
+
+footer {
+    width: 1250px;
+    background-color: #1B1E1F;
+    border: 1px solid#333333;
+    color: #ffffff;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0px 22px 22px gray;
+
+
+}
+
+
+/******************************************* login************************************************************ */
+/* *{
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+} */
+/* body {
+    background-color: #435165;
+    margin: 0;
+} */
+.login, .register {
+    width: 400px;
+    background-color: #ffffff;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+    margin: 100px auto;
+}
+.login h1, .register h1 {
+    text-align: center;
+    color: #5b6574;
+    font-size: 24px;
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid #dee0e4;
+}
+.login .links, .register .links {
+    display: flex;
+    padding: 0 15px;
+}
+.login .links a, .register .links a {
+    color: #adb2ba;
+    text-decoration: none;
+    display: inline-flex;
+    padding: 0 10px 10px 10px;
+    font-weight: bold;
+}
+.login .links a:hover, .register .links a:hover {
+    color: #9da3ac;
+}
+.login .links a.active, .register .links a.active {
+    border-bottom: 3px solid #3274d6;
+    color: #3274d6;
+}
+.login form, .register form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+    width:90%;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+.login form label, .register form label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 42px;
+    background-color: #3274d6;
+    color: #ffffff;
+}
+.login form input[type="password"], .login form input[type="text"], .login form input[type="email"], .register form input[type="password"], .register form input[type="text"], .register form input[type="email"] {
+    width: 254px;
+    height: 50px;
+    border: 1px solid #dee0e4;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+.login form input[type="submit"], .register form input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: var(--color1);
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color 0.2s;
+}
+.login form input[type="submit"]:hover, .register form input[type="submit"]:hover {
+    background-color: #2868c7;
+    transition: background-color 0.2s;
+}
+.navtop {
+    background-color: transparent;
+    height: 46px;
+    width: 100%;
+    border: 0;
+    
+}
+.navtop div {
+    display: flex;
+    margin: 0 auto;
+    width: 1000px;
+    height: 100%;
+    justify-content: flex-end;
+    
+}
+.navtop div h1, .navtop div a {
+    display: inline-flex;
+    align-items: center;
+}
+.navtop div h1 {
+    flex: 1;
+    font-size: 24px;
+    padding: 0;
+   margin: 0;
+    color: #eaebed;
+    font-weight: normal;
+}
+.navtop div a {
+    padding: 0 20px;
+    text-decoration: none;
+    color: #c1c4c8;
+    font-weight: bold;
+}
+.navtop div a i {
+    padding: 2px 8px 0 0;
+}
+.navtop div a:hover {
+    color: #eaebed;
+}
+body.loggedin {
+    background-color: #f3f4f7;
+}
+.content {
+    width: 1000px;
+    margin: 0 auto;
+}
+.content h2 {
+    margin: 0;
+    padding: 25px 0;
+    font-size: 22px;
+    border-bottom: 1px solid #e0e0e3;
+    color: #4a536e;
+}
+.content > p, .content > div {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    margin: 25px 0;
+    padding: 25px;
+  background-color: #fff;
+}
+.content > p table td, .content > div table td {
+  padding: 5px;
+}
+.content > p table td:first-child, .content > div table td:first-child {
+  font-weight: bold;
+  color: #4a536e;
+  padding-right: 15px;
+}
+.content > div p {
+  padding: 5px;
+  margin: 0 0 10px 0;
+}

@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Inicio
+
+{% endblock %}
+
+
+{% block content %}
+{% if coche %}
+<h1>Editar coche {{coche.1}} {{coche.2}}</h1>
+{% else %}
+<h1>Crear camiseta</h1>
+{% endif %}
+<form action="" method="POST" enctype="multipart/form-data">
+
+    <label for="marca">Marca</label>
+
+    <input type="text" name="marca" {% if coche %} value="{{coche.1}}" {% endif %}>
+
+
+
+
+    <label for="modelo">Modelo</label>
+
+    <input type="text" name="modelo" {% if coche %} value="{{coche.2}}" {% endif %}>
+
+
+    <label for="precio">Precio</label>
+
+    <input type="number" name="precio" {% if coche %} value="{{coche.3}}" {% endif %}>
+
+
+    <label for="ciudad">Talla</label>
+
+    <input type="text" name="Talla" {% if coche %} value="{{coche.4}}" {% endif %}>
+
+    <label for="imagen">Imagen</label>
+
+    <input type="file" name="imagen" class="form-control-file">
+
+
+    <input type="submit" value="Enviar">
+</form>
+
+{% endblock %}
